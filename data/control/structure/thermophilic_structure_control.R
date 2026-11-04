@@ -63,7 +63,8 @@ data.raw$regeneration <- data.raw$regeneration %>%
 ## change browsing codes for reg_subplot and summarise
 
 # data.raw$regeneration_subplot <- data.raw$regeneration_subplot %>%
-#   mutate(browsing = ifelse(browsing %in% 1, 1, 6)) %>%
+#   mutate(browsing = ifelse(browsing %in% 3, 10, browsing)) %>%
+#   mutate(browsing = ifelse(browsing %in% 2, 3, browsing)) %>%
 #   group_by(date, plotid, subplot_n, subplotsize_m2, species, htclass, browsing, regeneratedon) %>%
 #   summarise(count = sum(count)) %>%
 #   ungroup()
